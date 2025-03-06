@@ -2,6 +2,9 @@
 
 - Vite
 - Configured Tailwind CSS
+- Header
+- Login Form
+- Sign Up
 
 
 # Features
@@ -19,4 +22,8 @@
 - Netflix GPT
     - Searchbar
     - Movie Suggestions
+
+
+# React Forms
+- Use Formik
 
