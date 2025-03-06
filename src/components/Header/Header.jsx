@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { auth } from '../../utils/firebase';
-import { signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { NETFLIX_USER_AVATAR } from '../../utils/constants';
 import UserAvatar from './UserAvatar/UserAvatar';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addUser, removeUser } from '../../utils/ReduxStore/userSlice';
 
 const Header = () => {
 
   const [showAvatarMenu, setShowAvatarMenu] = useState(false);
   const navigate = useNavigate();
   const userDetails = useSelector((store) => store.user.userDetails);
+  const dispatch = useDispatch();
   console.log("userDetails header: ", userDetails);
 
   const handleSignOut = () => {
@@ -31,6 +33,20 @@ const Header = () => {
       setShowAvatarMenu(false);
     }
   }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(addUser({ uid, email, displayName, photoURL }));
+        navigate("/browse");
+      } else {
+        // User is signed out
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+  }, []);
 
   return (
     <div className='absolute w-screen px-8 py6 bg-gradient-to-b from-black z-10 flex justify-between'>
