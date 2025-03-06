@@ -3,8 +3,18 @@
 - Vite
 - Configured Tailwind CSS
 - Header
+- Routing of App
 - Login Form
 - Sign Up
+- Form Validation
+- useRef hook
+- Firebase Authentication
+- Create Signup in Firebase
+- Implement Sign In Firebase
+- Created Redux store with userSlice
+- Implemeneted Sign out
+- Update profile
+- Fetch from TMDB movies
 
 
 # Features
