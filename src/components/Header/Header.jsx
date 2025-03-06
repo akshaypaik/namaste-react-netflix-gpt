@@ -35,7 +35,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const authStateUnsubscription = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
         dispatch(addUser({ uid, email, displayName, photoURL }));
@@ -46,6 +46,11 @@ const Header = () => {
         navigate("/");
       }
     });
+
+    // Unsubscribe when component unmounts
+    return () => {
+      authStateUnsubscription();
+    }
   }, []);
 
   return (
@@ -56,7 +61,7 @@ const Header = () => {
           onMouseLeave={() => handleAvatarMouseEvents('mouseleave')}>
           <img className='w-8 h-8 mt-6'
             src={NETFLIX_USER_AVATAR} alt='user-avatar' />
-          <button onClick={handleSignOut} className='text-sm font-bold cursor-pointer py-2 hover:text-red-600'>(Sign Out)</button>
+          <button onClick={handleSignOut} className='text-white text-sm font-bold cursor-pointer py-2 hover:text-red-600'>(Sign Out)</button>
           {showAvatarMenu && <div>
             <UserAvatar />
           </div>}

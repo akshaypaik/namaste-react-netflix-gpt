@@ -15,6 +15,17 @@
 - Implemeneted Sign out
 - Update profile
 - Fetch from TMDB movies
+- BugFix: Redirect route to /browser if logged in and vice verse to / if not logged in 
+- Unsubscribed to onAuthStateChanged callback
+- Add hardcoded values to constants
+- Register TMDB API and create an app and get access token
+- Get data from tmdb api now playing movies list api
+- Create movie slice
+- Customer hooks for now playing movies and movie trailer 
+- Planning for Main and secondary container
+- Update store with trailer video data
+- Embedded youtube video and make it autoplay and mute
+- Tailwind css to make main container look awesome
 
 
 # Features
