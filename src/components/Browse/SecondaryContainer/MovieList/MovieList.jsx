@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
+import './MovieList.css';
 
 const MovieList = ({ title, movies }) => {
 
@@ -8,7 +9,7 @@ const MovieList = ({ title, movies }) => {
     const handleScroll = (scrollDirection) => {
         if (scrollRef.current) {
             const { current } = scrollRef;
-            const scrollAmount = 500;
+            const scrollAmount = 1000;
 
             if (scrollDirection === "left") {
                 current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -21,7 +22,7 @@ const MovieList = ({ title, movies }) => {
     return (
         <div className='text-white'>
             <h1 className='text-4xl font-semibold py-4 overflow-hidden'>{title}</h1>
-            <div className='text-white flex overflow-x-scroll scroll-smooth md:scroll-auto items-center' ref={scrollRef}>
+            <div className='text-white flex items-center overflow-x-hidden' ref={scrollRef}>
                 <button className='absolute left-0 cursor-pointer bg-gradient-to-l from-white/30 h-48' onClick={() => handleScroll('left')}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
