@@ -14,7 +14,7 @@ export const TMDB_API_OPTIONS = {
     }
 };
 
-export const OPEN_API_KEY = "";
+// export const OPEN_API_KEY = "";
 
 export const PREFERRED_LANGS = [
     { name: "English", identifier: "en" },

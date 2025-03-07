@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { lang } from '../../../../utils/langConstants';
-import openAIClient from '../../../../utils/openai';
+// import openAIClient from '../../../../utils/openai';
 
 const GPTSearchBar = () => {
 
@@ -12,15 +12,15 @@ const GPTSearchBar = () => {
         const searchString = userSearchString.current.value;
 
         // make an api call to openai and get movie results
-        const gptQuery = `Act as a Movie Recommendation system and suggest some movies for the query 
-        ${searchString}. only give me names of 5 movies, comma seperated like the example result given ahead. 
-        Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya`;
+        // const gptQuery = `Act as a Movie Recommendation system and suggest some movies for the query 
+        // ${searchString}. only give me names of 5 movies, comma seperated like the example result given ahead. 
+        // Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya`;
 
-        const gptResults = await openAIClient.chat.completions.create({
-            messages: [{ role: 'user', content: gptQuery }],
-            model: 'gpt-4o-mini',
-        });
-        console.log(gptResults.choices);
+        // const gptResults = await openAIClient.chat.completions.create({
+        //     messages: [{ role: 'user', content: gptQuery }],
+        //     model: 'gpt-4o-mini',
+        // });
+        // console.log(gptResults.choices);
 
     }
 
