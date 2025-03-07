@@ -4,6 +4,8 @@ export const NETFLIX_LOGO_IMAGE = "https://help.nflxext.com/helpcenter/OneTrust/
 
 export const NETFLIX_USER_AVATAR = "https://occ-0-5690-3663.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABcLtVOXjghzlDrVwmPHGQtkXjoJPmpISBttze62ZpxaaFWq-LZVH5yZxMD15UVLU6nd4GIUtTSHOMsbUOdPCIYRL2-2bGNU.png?r=b38";
 
+export const TMDB_IMAGE_CDN = "https://image.tmdb.org/t/p/w500/";
+
 export const TMDB_API_OPTIONS = {
     method: 'GET',
     headers: {
