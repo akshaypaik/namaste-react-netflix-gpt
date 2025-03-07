@@ -22,7 +22,7 @@ const MovieList = ({ title, movies }) => {
     return (
         <div className='text-white'>
             <h1 className='text-4xl font-semibold py-4 overflow-hidden'>{title}</h1>
-            <div className='text-white flex items-center overflow-x-hidden' ref={scrollRef}>
+            <div className='text-white flex items-center overflow-x-hidden overflow-y-hidden' ref={scrollRef}>
                 <button className='absolute left-0 cursor-pointer bg-gradient-to-l from-white/30 h-48' onClick={() => handleScroll('left')}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
