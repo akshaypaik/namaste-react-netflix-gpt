@@ -10,9 +10,11 @@ export const TMDB_API_OPTIONS = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWJhNmZmNmY3MDA4YmQwMzE4Y2RmNzYwMGU3NjcyNiIsIm5iZiI6MTc0MTI2Mzk4MS4wNDEsInN1YiI6IjY3Yzk5NDZkNmZiNDAwMTM5MjBjZWIyZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Jro9Ek-yRaupUtqgTNub24ozSELx9c52QmPGIX0bxMw'
+        Authorization: `Bearer ${process.env.VITE_TMDB_API_KEY}` 
     }
 };
+
+export const OPEN_API_KEY = process.env.VITE_OPEN_API_KEY;
 
 export const PREFERRED_LANGS = [
     { name: "English", identifier: "en" },
