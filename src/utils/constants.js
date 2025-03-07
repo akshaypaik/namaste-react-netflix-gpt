@@ -13,3 +13,8 @@ export const TMDB_API_OPTIONS = {
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWJhNmZmNmY3MDA4YmQwMzE4Y2RmNzYwMGU3NjcyNiIsIm5iZiI6MTc0MTI2Mzk4MS4wNDEsInN1YiI6IjY3Yzk5NDZkNmZiNDAwMTM5MjBjZWIyZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Jro9Ek-yRaupUtqgTNub24ozSELx9c52QmPGIX0bxMw'
     }
 };
+
+export const PREFERRED_LANGS = [
+    { name: "English", identifier: "en" },
+    { name: "Hindi", identifier: "hindi" }
+]
