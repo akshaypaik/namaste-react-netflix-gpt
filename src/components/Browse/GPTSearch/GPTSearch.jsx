@@ -8,9 +8,9 @@ const GPTSearch = () => {
     return (
         <div className='w-full h-dvh'>
             <div className='absolute -z-10'>
-                <img src={NETFLIX_BG_IMAGE} alt='Netflix BG' className='' />
+                <img src={NETFLIX_BG_IMAGE} alt='Netflix BG' className='h-screen object-cover md:w-screen' />
             </div>
-            <div className='pt-36'>
+            <div className='md:pt-36 pt-48'>
                 <GPTSearchBar />
                 <GPTMovieSuggestions />
             </div>

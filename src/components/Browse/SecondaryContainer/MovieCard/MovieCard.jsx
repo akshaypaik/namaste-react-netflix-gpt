@@ -4,7 +4,7 @@ import './MovieCard.css';
 
 const MovieCard = ({movieData}) => {
   return (
-    <div className='w-48 cursor-pointer movie-poster'>
+    <div className='w-36 md:w-48 cursor-pointer movie-poster'>
         <img src={`${TMDB_IMAGE_CDN}${movieData?.poster_path}`} />
     </div>
   )

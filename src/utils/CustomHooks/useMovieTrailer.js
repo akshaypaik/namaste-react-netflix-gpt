@@ -20,7 +20,7 @@ const useMovieTrailer = async(movieId) => {
 
     useEffect(() => {
         // Memoization
-        !trailerVideoData && getMovieVideos();
+        !trailerVideoData?.key && getMovieVideos();
     }, []);
 }
 
