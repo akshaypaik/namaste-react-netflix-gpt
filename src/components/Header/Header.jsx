@@ -18,12 +18,12 @@ const Header = () => {
   const isGPTSearchActive = useSelector((store) => store.gptSearch.isGPTSearchActive);
   const preferredLang = useSelector((store) => store.config.preferredLang);
   const dispatch = useDispatch();
-  console.log("userDetails header: ", userDetails);
+  // console.log("userDetails header: ", userDetails);
 
   const handleSignOut = () => {
     signOut(auth).then(() => {
       // Sign-out successful.
-      console.log("Succesfully signed out");
+      // console.log("Succesfully signed out");
       navigate("/");
     }).catch((error) => {
       // An error happened.

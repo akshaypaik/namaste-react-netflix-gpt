@@ -16,7 +16,7 @@ const Login = () => {
     const password = useRef(null);
     const userName = useRef(null);
     const userDetails = useSelector((store) => store.user.userDetails);
-    console.log("use selector userDetails: ", userDetails);
+    // console.log("use selector userDetails: ", userDetails);
 
 
     const toggleSignInForm = () => {
@@ -45,7 +45,7 @@ const Login = () => {
                     }).catch((error) => {
                         // An error occurred
                     });
-                    console.log("sign up user response: ", user);
+                    // console.log("sign up user response: ", user);
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -58,7 +58,7 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log("sign in user response: ", user);
+                    // console.log("sign in user response: ", user);
                 })
                 .catch((error) => {
                     const errorCode = error.code;

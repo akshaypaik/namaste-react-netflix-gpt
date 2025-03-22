@@ -9,7 +9,7 @@ const useUpcomingMovies = async () => {
     const getUpcomingMovies = async () => {
         const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?with_original_language=hi', TMDB_API_OPTIONS);
         const jsonData = await data.json();
-        console.log("tmdb Upcoming movies: ", jsonData);
+        // console.log("tmdb Upcoming movies: ", jsonData);
         dispatch(addUpcomingMovies(jsonData.results));
     }
 

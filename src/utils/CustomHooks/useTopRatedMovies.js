@@ -9,7 +9,7 @@ const useTopRatedMovies = async () => {
     const getTopRatedMovies = async () => {
         const data = await fetch('https://api.themoviedb.org/3/movie/top_rated?with_original_language=hi', TMDB_API_OPTIONS);
         const jsonData = await data.json();
-        console.log("tmdb TopRated movies: ", jsonData);
+        // console.log("tmdb TopRated movies: ", jsonData);
         dispatch(addTopRatedMovies(jsonData.results));
     }
 
